@@ -1,0 +1,56 @@
+/* Flexbox
+p{
+    background: yellow;
+    margin: .5em;
+    font-size: 1.5em;
+    flex: 1 1 200px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+*/
+
+// CSS Grid
+p{
+    background: yellow;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+//Breakpoints (Definición de resoluciones de pantalla estándar)
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+@mixin rwd($bp) {
+    @if map-has-key($breakpoints,$bp){
+        @media screen and (min-width:map-get($breakpoints,$bp)){
+            @content;
+        }
+    }
+    @else{
+        @media screen and (min-width: $bp){
+            @content;
+        }
+    }
+}
+body{
+    background: red;
+    @include rwd(500px){
+        background: green;
+    }
+    @include rwd(large){
+        background: gray;
+    }
+}

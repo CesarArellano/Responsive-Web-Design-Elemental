@@ -1,0 +1,72 @@
+html
+{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,'Nanum Gothic', Arial, "Lucida Grande", sans-serif !important;
+}
+/* Responsive básico
+.container{
+    width: 75%;
+    max-width: 960px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.video{
+    height: 0;
+    padding-bottom: 56.25%;
+    background: green;
+    position: relative;
+    > iframe,
+    > video
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+- Viewport
+.video{
+    --unit: 2vmax;
+    --width: calc(var(--unit) * 16);
+    --height: calc(var(--unit) * 9);
+    width: var(--width);
+    height: var(--height);
+    background: gray;
+}
+*/
+@mixin ratio($w,$h) {
+    display: grid;
+    grid-template-columns: repeat($w,1fr);
+    grid-template-rows: repeat($h,1fr);
+    background:gray;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+.video{
+    @include ratio(16,9);
+    > iframe,video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+.container{
+    width: 75%;
+    max-width: 960px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.center-align
+{
+    text-align: center;
+}

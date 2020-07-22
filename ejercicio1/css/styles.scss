@@ -1,0 +1,86 @@
+$small: 320px;
+$medium: 600px;
+$large: 920px;
+$xlarge: 1200px;
+
+:root 
+{
+    --scroll-bar: 13px;
+}
+@mixin rwd($breakpoint) {
+    @media screen and (min-width: $breakpoint){
+        @content
+    }
+    
+}
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: red;
+    @include rwd($small){
+        background-color: gray;
+    }
+    @include rwd($medium){
+        background-color: green;
+    }
+    @include rwd($large){
+        background-color: orange;
+    }
+    @include rwd($xlarge){
+        background-color: purple;
+    }
+}
+/*
+Unidades relativas
+1.- Porcentaje %
+2.- em  y rem
+    1em = 100% del tamaño de fuente del contexto
+    1rem = 100% del tamaño de fuente del root (<html>)
+3.- unidades del viewport: vw, vh vmin, vmax 
+    1vw = 1% ancho del viewport 
+    1vh = 1% alto del viewport
+    vmin =  1% del lado menor del viewport
+    vmax = 1% del lado mayor del viewport
+
+p{
+    font-size: 2em;
+    padding: 1em;
+    background: yellow;
+    margin: 0 auto;
+    width: 75%;
+    min-width: 320px;
+}
+
+span{
+    font-size: 2em;
+}
+
+button{
+    font-size: 3em;
+    border:none;
+    border-radius: .25em;
+    background:red;
+    color:white;
+    padding: .5em 1.5em;
+    margin: 2rem;
+}
+*/
+footer{
+    background: red;
+    padding: 1em;
+    margin-top: auto;
+    width: calc(100vw -var(--scroll-bar));
+}
+.box{
+    background: yellow;
+    width: 25vmin;
+    height: 25vmin;
+}
+header{
+    background: black;
+    color:white;
+    text-align: center;
+    padding: 10vmin 0;
+}
