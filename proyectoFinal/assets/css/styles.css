@@ -65,6 +65,17 @@
     .main-menu-toggle {
       display: none; } }
 
+.main-banner {
+  padding: 5rem 1rem 6rem;
+  background: blue;
+  color: #FFF;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%); }
+  .main-banner__logo {
+    height: 5rem;
+    display: block;
+    margin: 0 auto .5rem; }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
