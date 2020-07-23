@@ -1,0 +1,9 @@
+[class*=icon-]::before {
+  content: "";
+  display: inline-block;
+  margin-right: .25rem;
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.icon-location::before {
+  background: url("../img/icon-magnifying.svg"); }
