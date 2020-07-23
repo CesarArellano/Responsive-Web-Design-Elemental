@@ -21,5 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
         margin-top: 4em;
         border-bottom: ${size * 2}px solid black;
     `;
-    document.getElementById('title').setAttribute('style',styles);
+    //1.-  Sobreescribiendo los estilos inline existentes (mejor opción)
+    //document.getElementById('title').setAttribute('style',styles);
+    const setStyles = (element,styles) => {
+        element.setAttribute('style',styles);
+    }
+    setStyles(document.getElementById('title'),styles);
+
+    //2.- Agregando a los estilos inline existentes
+    //document.getElementById('title').style += `${styles}`;
 });
