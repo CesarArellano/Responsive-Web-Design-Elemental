@@ -25,7 +25,7 @@ html
     }
 }
 
-- Viewport
+- Tipo Viewport
 .video{
     --unit: 2vmax;
     --width: calc(var(--unit) * 16);
@@ -35,6 +35,7 @@ html
     background: gray;
 }
 */
+// Tipo Grid 
 @mixin ratio($w,$h) {
     display: grid;
     grid-template-columns: repeat($w,1fr);
@@ -64,8 +65,19 @@ html
     margin-right: auto;
 
 }
-
-
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.images{
+    @include ratio(16,9);
+    background: red;
+    background: url("https://cdn.pocket-lint.com/r/s/1200x/assets/images/147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg") center / cover;
+    @media screen and (min-width: 640px){
+        background: url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg") center / cover;
+    }
+}
 .center-align
 {
     text-align: center;
