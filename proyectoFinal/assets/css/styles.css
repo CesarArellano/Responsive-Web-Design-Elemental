@@ -13,8 +13,7 @@
 .main-header__block {
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  flex-wrap: wrap; }
+  height: 100%; }
 
 .main-logo {
   height: 2rem; }
@@ -23,12 +22,27 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  list-style: none;
-  display: flex; }
+  list-style: none; }
+
+.main-menu_item {
+  padding: 1rem; }
 
 .main-menu_link {
   color: #52575A;
   margin-left: 1rem; }
+
+.main-nav {
+  position: fixed;
+  height: calc(100vh - 4rem);
+  width: 80vw;
+  background: #141618;
+  top: 4rem; }
+
+.main-menu-toggle {
+  width: 2.2rem;
+  height: 1.6rem;
+  background: linear-gradient(#141618 20%, transparent 20%, transparent 40%, #141618 40%, #141618 60%, transparent 60%, transparent 80%, #141618 80%);
+  cursor: pointer; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
