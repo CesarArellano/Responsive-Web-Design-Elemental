@@ -6,7 +6,6 @@
 
     document.body.style.background = 'gray';
 
-*/
 // Forma 1 Cambiando clases
 function cambiarBackground(){
     document.body.classList.add('red');
@@ -31,3 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
     //2.- Agregando a los estilos inline existentes
     //document.getElementById('title').style += `${styles}`;
 });
+*/
+// Leer y modificar variables CSS
+
+document.addEventListener("DOMContentLoaded", function() {
+    //Modificar
+    //document.documentElement.style.setProperty('--name','Mauricio');
+    //Leer
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--name'));
+    
+});
+//Modificar
