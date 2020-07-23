@@ -7,6 +7,29 @@
     margin-left: auto;
     flex-wrap: wrap;
 }
+.l-section{
+    margin-bottom: 2rem;
+    @include from(l){
+        margin-bottom: 3rem;
+    }
+    &--diagonal{
+        position: relative;
+        &::before{
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #F0F0F0;
+            z-index: var(--z-back);
+            transform: skewY(-1deg) scaleY(1.02);
+            @include from(l){
+                transform: skewY(-2deg) scaleY(1.05);
+            }
+
+        }
+    }
+}
+
 
 // Anchos personalizados
 @for $i from 1 through 20{
