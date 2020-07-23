@@ -1,5 +1,6 @@
 :root {
-  --first-color: #007BDF; }
+  --first-color: #007BDF;
+  --border-color: #DFE0E0; }
 
 :root {
   --z-back: -10;
@@ -10,11 +11,13 @@
 
 :root {
   --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
   --body-font-size: .9rem;
   --small-font-size: .75rem; }
   @media screen and (min-width: 960px) {
     :root {
       --h1-font-size: 2.5rem;
+      --h2-font-size: 1.75rem;
       --body-font-size: 1rem;
       --small-font-size: .8rem; } }
 
@@ -24,7 +27,8 @@
   padding-right: 1rem;
   display: flex;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  flex-wrap: wrap; }
 
 .s-5 {
   width: 5%; }
@@ -223,6 +227,13 @@
     object-position: center;
     opacity: .1; }
 
+.card__img img {
+  display: block; }
+
+.card__content {
+  padding: 1rem;
+  border: 1px solid var(--border-color); }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -237,8 +248,14 @@ a {
 img {
   max-width: 100%; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0; }
+
 h1 {
   font-size: var(--h1-font-size); }
+
+h2 {
+  font-size: var(--h2-font-size); }
 
 .small {
   font-size: var(--small-font-size); }

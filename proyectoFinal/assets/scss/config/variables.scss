@@ -12,6 +12,7 @@ $breakpoints: (
 // Paleta de colores
 :root{
     --first-color: #007BDF;
+    --border-color: #DFE0E0;
 }
 
 // Variables de apilamiento (z-index)
@@ -26,10 +27,12 @@ $breakpoints: (
 // Variables de tipografía
 :root{
     --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
     --body-font-size: .9rem;
     --small-font-size: .75rem;
     @include from(l){
         --h1-font-size: 2.5rem;
+        --h2-font-size: 1.75rem;
         --body-font-size: 1rem;
         --small-font-size: .8rem;
     }

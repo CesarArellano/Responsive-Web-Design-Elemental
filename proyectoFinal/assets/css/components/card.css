@@ -1,0 +1,6 @@
+.card__img img {
+  display: block; }
+
+.card__content {
+  padding: 1rem;
+  border: 1px solid var(--border-color); }
