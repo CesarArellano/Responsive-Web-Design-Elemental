@@ -6,3 +6,26 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+// Anchos personalizados
+@for $i from 1 through 20{
+    .s-#{$i*5}{
+        width: #{$i*5%};
+    }
+}  
+@include from(l){
+    @for $i from 1 through 20{
+        .l-#{$i*5}{
+            width: #{$i*5%};
+        }
+    }  
+}
+
+.center-block{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-content{
+    text-align: center;
+}
