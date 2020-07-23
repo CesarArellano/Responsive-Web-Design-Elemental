@@ -3,13 +3,19 @@
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
+    @include from(l){
+        display: flex;
+    }
 }
 .main-menu_item{
     padding: 1rem;
 }
 .main-menu_link{
-    color: $text-color;
+    color: $border-color;
     margin-left: 1rem;
+    @include from(l){
+        color: $text-color;
+    }
 }
 .main-nav{
     position: fixed;
@@ -17,6 +23,19 @@
     width: 80vw;
     background: $dark-color;
     top: $header-height;
+    right: -80vh;
+    transition: right .5s;
+    padding-top: 1rem;
+    @include from(l){
+        position: static;
+        background: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
+    &.show{
+        right: 0;
+    }
 }
 
 .main-menu-toggle{
@@ -26,4 +45,8 @@
     background: linear-gradient($color 20%,transparent 20%,transparent 40%,
     $color 40%, $color 60%,transparent 60%, transparent 80%, $color 80%);
     cursor: pointer;
+    @include from(l){
+        display: none;
+    }
+
 }

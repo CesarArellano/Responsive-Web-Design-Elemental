@@ -23,26 +23,47 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
+  @media screen and (min-width: 640px) {
+    .main-menu {
+      display: flex; } }
 
 .main-menu_item {
   padding: 1rem; }
 
 .main-menu_link {
-  color: #52575A;
+  color: #CCC;
   margin-left: 1rem; }
+  @media screen and (min-width: 640px) {
+    .main-menu_link {
+      color: #52575A; } }
 
 .main-nav {
   position: fixed;
   height: calc(100vh - 4rem);
   width: 80vw;
   background: #141618;
-  top: 4rem; }
+  top: 4rem;
+  right: -80vh;
+  transition: right .5s;
+  padding-top: 1rem; }
+  @media screen and (min-width: 640px) {
+    .main-nav {
+      position: static;
+      background: transparent;
+      padding-top: 0;
+      height: auto;
+      width: auto; } }
+  .main-nav.show {
+    right: 0; }
 
 .main-menu-toggle {
   width: 2.2rem;
   height: 1.6rem;
   background: linear-gradient(#141618 20%, transparent 20%, transparent 40%, #141618 40%, #141618 60%, transparent 60%, transparent 80%, #141618 80%);
   cursor: pointer; }
+  @media screen and (min-width: 640px) {
+    .main-menu-toggle {
+      display: none; } }
 
 *, *::before, *::after {
   box-sizing: border-box; }
