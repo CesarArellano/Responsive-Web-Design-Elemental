@@ -11,7 +11,7 @@
 function cambiarBackground(){
     document.body.classList.add('red');
 }
-// Forma 2:
+// Forma 2 Definiendo atributos:
 document.addEventListener("DOMContentLoaded", function() {
     const color = 'red';
     const size = 2;
