@@ -1,6 +1,13 @@
 :root {
   --first-color: #007BDF; }
 
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000; }
+
 .l-container {
   max-width: 1200px;
   padding-left: 1rem;
@@ -48,7 +55,8 @@
   top: 4rem;
   right: -80vh;
   transition: right .5s;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  z-index: var(--z-fixed); }
   @media screen and (min-width: 640px) {
     .main-nav {
       position: static;
