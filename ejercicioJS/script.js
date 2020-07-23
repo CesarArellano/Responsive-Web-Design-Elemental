@@ -34,10 +34,27 @@ document.addEventListener("DOMContentLoaded", function() {
 // Leer y modificar variables CSS
 
 document.addEventListener("DOMContentLoaded", function() {
-    //Modificar
-    //document.documentElement.style.setProperty('--name','Mauricio');
+    /*Modificar
+    document.documentElement.style.setProperty('--name','Mauricio');
     //Leer
     console.log(getComputedStyle(document.documentElement).getPropertyValue('--name'));
-    
+    */
+   // Media queries con JS (sólo cuando CSS no es capaz de modificar el contenido)
+
+    const mediumBp = matchMedia('(min-width: 800px)');
+    const changeColor = mql => {
+        mql.matches ? document.body.style.background = 'red' : document.body.style.background = 'yellow' ;
+    }
+    changeColor(mediumBp);
+    mediumBp.addListener(changeColor);
+    /*addEventListener('resize', () => {
+        console.log(mediumBp);
+        if(mediumBp.matches){
+            document.body.style.background = "green";
+        }
+        else{
+            document.body.style.background = "gray";
+        }
+    });*/
 });
 //Modificar
