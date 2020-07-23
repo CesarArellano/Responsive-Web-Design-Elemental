@@ -1,4 +1,5 @@
 .main-banner {
+  --padding: 2rem 1rem 3rem;
   padding: 5rem 1rem 6rem;
   background: var(--first-color);
   color: #FFF;

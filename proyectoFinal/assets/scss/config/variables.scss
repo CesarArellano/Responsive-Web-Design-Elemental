@@ -14,11 +14,22 @@ $breakpoints: (
 }
 
 // Variables de apilamiento (z-index)
-
 :root{
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
+}
+
+// Variables de tipografía
+:root{
+    --h1-font-size: 2rem;
+    --body-font-size: .9rem;
+    --small-font-size: .75rem;
+    @include from(l){
+        --h1-font-size: 2.5rem;
+        --body-font-size: 1rem;
+        --small-font-size: .8rem;
+    }
 }

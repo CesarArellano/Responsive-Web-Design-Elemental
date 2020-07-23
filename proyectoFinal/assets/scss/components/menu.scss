@@ -20,7 +20,7 @@
 .main-nav{
     position: fixed;
     height: calc(100vh - #{$header-height});
-    width: 80vw;
+    width: 75vw;
     background: $dark-color;
     top: $header-height;
     right: -80vh;

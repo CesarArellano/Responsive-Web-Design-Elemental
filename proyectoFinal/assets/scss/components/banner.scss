@@ -1,5 +1,11 @@
 .main-banner{
-    padding: 5rem 1rem 6rem;
+    --padding: 2rem 1rem 3rem;
+    --logo-height: 3.5rem;
+    @include from(l){
+        --padding: 5rem 1rem 6rem;
+        --logo-height: 5rem;
+    }
+    padding: var(--padding);
     background: var(--first-color);
     color: #FFF;
     text-align: center;
@@ -9,7 +15,7 @@
         position: relative;
     }
     &__logo{
-        height: 5rem;
+        height: var(--logo-height);
         display: block;
         margin: 0 auto .5rem;
     }
